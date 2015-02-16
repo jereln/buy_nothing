@@ -2,7 +2,6 @@
 <table>
   <thead>
   <tr>
-    <th colspan="2"></th>
     <th>Name</th>
     <th>Description</th>
   </tr>
@@ -10,8 +9,8 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
-        <td> item.name</td>
-        <td> item.description</td>
+        <td> <%= item.title %></td>
+        <td> <%= item.description %></td>
       </tr>
     <% end %>
   </tbody>

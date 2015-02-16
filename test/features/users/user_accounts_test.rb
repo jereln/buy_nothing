@@ -25,6 +25,7 @@ feature 'user accounts with devise' do
     fill_in 'Email', with: 'user@example.com'
     fill_in 'Password', with: 'incorrect password'
     click_on 'Log in'
-    save_and_open_page
+    page.must_have_content 'Invalid email or password'
+    page.wont_have_content 'Sign Out'
   end
 end
