@@ -10,7 +10,7 @@ class GiveAwayItemsController < ApplicationController
   def create
     @item = GiveAwayItem.new(item_params)
     if @item.save
-      redirect_to @item, notice: 'Item successfully posted.'
+      redirect_to @item, notice: 'Item successfully posted!'
     else
       render :new
     end
@@ -22,6 +22,6 @@ class GiveAwayItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:give_away_item).permit(:title, :description)
+    params.require(:give_away_item).permit(:title, :description, :give_away_item_image)
   end
 end
