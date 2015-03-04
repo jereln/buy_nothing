@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  resources :give_away_items do
+    resources :comments
+  end
+  devise_for :users
+
   get 'static_pages/landing_page'
   root 'static_pages#landing_page'
 
-  resources :give_away_items
-
-  devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

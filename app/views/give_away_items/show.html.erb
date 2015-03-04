@@ -2,4 +2,13 @@
 <p><%= @item.description %></p>
 <p><%= image_tag @item.give_away_item_image if @item.give_away_item_image %></p>
 
+<h2>Comments</h2>
+<div class='comments'>
+  <% @item.comments.each do |comment| %>
+    <p><%= comment.body %></p>
+  <% end %>
+</div>
+
+<div><%= render 'comments/form' %></div>
+
 <%= link_to 'Back', give_away_items_path %>

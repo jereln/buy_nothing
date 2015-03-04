@@ -18,6 +18,7 @@ class GiveAwayItemsController < ApplicationController
 
   def show
     @item = GiveAwayItem.find(params[:id])
+    @comment = Comment.new
   end
 
   def destroy
