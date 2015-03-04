@@ -1,20 +1,14 @@
 <h1>Give Away Items</h1>
-<table>
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td> <%= link_to item.title, item %></td>
-        <td> <%= item.description %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <% @items.each do |item| %>
+    <div class='item'>
+      <%= link_to (image_tag item.give_away_item_image), item %>
+      <div class='title'><%= item.title %></div>
+      <div class='actions'>
+        <%= link_to 'Edit' %> | 
+        <%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' }%>
+      </div>
+    </div>
+  <% end %>
 
-<%= link_to 'Post An Item', new_give_away_item_path %>
+<div class='clear'></div>
+  <p><%= link_to 'Post An Item', new_give_away_item_path %></p>

@@ -1,5 +1,5 @@
 <h1><%= @item.title %></h1>
-<h3><%= @item.description %></h3>
-<p><%= image_tag @item.give_away_item_image %></p>
+<p><%= @item.description %></p>
+<p><%= image_tag @item.give_away_item_image if @item.give_away_item_image %></p>
 
 <%= link_to 'Back', give_away_items_path %>

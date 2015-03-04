@@ -1,3 +1,29 @@
 // Place all the styles related to the GiveAwayItems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+.item {
+  border: solid 1px #CCC;
+  padding: 10px 10px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.item .title {
+  padding-top: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.item .actions {
+  font-size: 10px;
+  text-align: center;
+  color: #777;
+}
